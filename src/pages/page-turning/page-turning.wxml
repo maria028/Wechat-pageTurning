@@ -1,0 +1,39 @@
+<block wx:for="{{imageList}}" wx:for-index="index">
+  <view wx:if="{{index==currentPage}}" id="page-flip" bindtap="bindTurn">
+    <view id="r1" style="transform-origin:{{(turnPage == currentPage && index== currentPage )?windowWidth*2+diff:windowWidth+diff+rotate/2}}px {{diff/2}}px;transform:translate(-{{(turnPage == currentPage && index== currentPage )?windowWidth+diff:diff+rotate/2}}px, -{{diff/2}}px) rotate(-{{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);">
+      <view id="p1" style="height:{{windowHeight+diff}}px;width:{{windowWidth+diff}}px">
+        <view style="height:{{windowHeight}}px;width:{{windowWidth}}px;transform-origin:{{windowWidth}}px 0px;transform:translate({{(turnPage == currentPage && index== currentPage )?windowWidth+diff:diff+rotate/2}}px, {{diff/2}}px) rotate({{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);background-image: url({{imageList[currentPage]}})">p1
+        </view>
+      </view>
+    </view>
+    <view id="p2">
+      <view style="height:{{windowHeight}}px;width:{{windowWidth}}px;background-image: url({{imageList[currentPage+1]}})">p2</view>
+    </view>
+    <view id="r3" style="transform-origin:{{(turnPage == currentPage && index== currentPage )?windowWidth*2+diff:windowWidth+diff+rotate/2}}px {{diff/2}}px;transform:translate(-{{(turnPage == currentPage && index== currentPage )?windowWidth+diff:diff+rotate/2}}px, -{{diff/2}}px) rotate(-{{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);">
+      <view id="p3" style="height:{{windowHeight+diff}}px;width:{{windowWidth+diff}}px;">
+        <view style="height:{{windowHeight}}px;width:{{windowWidth}}px;transform-origin:0px 0px;transform:translate({{(turnPage == currentPage && index== currentPage )?diff:windowWidth+diff-rotate/2}}px, {{diff/2}}px) rotate(-{{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);">p3
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+
+
+<!-- <view id="page-flip" bindtap="bindTurn">
+    <view id="r1" style="transform-origin:{{(turnPage == currentPage && index== currentPage )?windowWidth*2+diff:windowWidth+diff+rotate/2}}px {{diff/2}}px;transform:translate(-{{(turnPage == currentPage && index== currentPage )?windowWidth+diff:diff+rotate/2}}px, -{{diff/2}}px) rotate(-{{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);">
+      <view id="p1" style="height:{{windowHeight+diff}}px;width:{{windowWidth+diff}}px">
+        <view style="height:{{windowHeight}}px;width:{{windowWidth}}px;transform-origin:{{windowWidth}}px 0px;transform:translate({{(turnPage == currentPage && index== currentPage )?windowWidth+diff:diff+rotate/2}}px, {{diff/2}}px) rotate({{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);background-image: url({{imageList[currentPage]}})">p1
+        </view>
+      </view>
+    </view>
+    <view id="p2">
+      <view style="height:{{windowHeight}}px;width:{{windowWidth}}px;background-image: url({{imageList[currentPage+1]}})">p2</view>
+    </view>
+    <view id="r3" style="transform-origin:{{(turnPage == currentPage && index== currentPage )?windowWidth*2+diff:windowWidth+diff+rotate/2}}px {{diff/2}}px;transform:translate(-{{(turnPage == currentPage && index== currentPage )?windowWidth+diff:diff+rotate/2}}px, -{{diff/2}}px) rotate(-{{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);">
+      <view id="p3" style="height:{{windowHeight+diff}}px;width:{{windowWidth+diff}}px;">
+        <view style="height:{{windowHeight}}px;width:{{windowWidth}}px;transform-origin:0px 0px;transform:translate({{(turnPage == currentPage && index== currentPage )?diff:windowWidth+diff-rotate/2}}px, {{diff/2}}px) rotate(-{{(turnPage == currentPage && index== currentPage )?0:rotate}}deg);">p3
+        </view>
+      </view>
+    </view>
+  </view> -->

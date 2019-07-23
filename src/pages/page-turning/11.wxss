@@ -1,0 +1,112 @@
+/* pages/page-turning/page-turning.wxss */
+
+#page-flip {
+  position: absolute;
+  /* padding: 40rpx 40rpx 40rpx 340rpx; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#r1 {
+  position: absolute;
+  z-index: 2;
+  transition-property: transform, transform-origin;
+  transition-duration: 1s;
+}
+
+.r1-default {
+  /* 1030+285=1315 */
+  transform-origin: 1315rpx 500rpx;
+  transform: translate(-1030rpx, -500rpx) rotate(-30deg);
+}
+
+.r1-active {
+  /* 1285+285=1570 */
+  transform-origin: 1570rpx 500rpx; 
+  transform: translate(-1285rpx, -500rpx) rotate(0deg);
+}
+
+#p1 {
+  width: 1285rpx;
+  height: 1388rpx;
+  overflow: hidden;
+}
+
+#p1  view {
+  transition-property: transform, transform-origin;
+  transition-duration: 1s;
+  width: 285rpx;
+  height: 388rpx;
+  background-image: url('http://img4.imgtn.bdimg.com/it/u=2457680105,4096669953&fm=26&gp=0.jpg');
+  background-size: 100%;
+}
+
+.p1view-default {
+  /* 1030-30=1000 */  
+  transform-origin: 285rpx 0;
+  transform: translate(1030rpx, 500rpx) rotate(30deg);
+}
+
+.p1view-active {
+  transform-origin: 285rpx 0;
+  transform: translate(1285rpx, 500rpx) rotate(0deg);
+}
+
+#p2  view {
+  width: 285rpx;
+  height: 388rpx;
+  box-shadow: 0 0 11rpx rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  background-image: url('http://img1.imgtn.bdimg.com/it/u=1000666009,3670998076&fm=15&gp=0.jpg');
+  background-size: 100%;
+}
+
+#r3 {
+  transition-property: transform, transform-origin;
+  transition-duration: 1s;
+  position: absolute;
+  z-index: 2;
+}
+
+.r3-default { 
+  /* 1030+285=1315 */
+  transform-origin: 1315rpx 500rpx;
+  transform: translate(-1030rpx, -500rpx) rotate(-30deg);
+}
+
+.r3-active {
+  /* 1285+285=1570 */
+  transform-origin: 1570rpx 500rpx;
+  transform: translate(-1285rpx, -500rpx) rotate(0deg);
+}
+
+#p3 {
+  width: 1285rpx;
+  height: 1388rpx;
+  overflow: hidden;
+}
+
+#p3  view {
+  transition-property: transform, transform-origin;
+  transition-duration: 1s;
+  box-shadow: 0 0 11rpx rgba(0, 0, 0, 0.5);
+  width: 285rpx;
+  height: 388rpx;
+  background-image: url('http://img5.imgtn.bdimg.com/it/u=3504811573,822576824&fm=26&gp=0.jpg');
+  background-size: 100%;
+  overflow: hidden;
+}
+
+.p3view-default {
+  /* 1285-30=1255 */
+  transform-origin: 0 0;
+  transform: translate(1255rpx, 500rpx) rotate(-30deg);
+}
+
+.p3view-active {
+  /* 1285-285=1000 */
+  transform-origin: 0 0;
+  transform: translate(1000rpx, 500rpx) rotate(0deg);
+}
